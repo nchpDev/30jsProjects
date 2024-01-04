@@ -35,10 +35,11 @@
             </div>
             <div class="input-group">
                 <label>Genero</label>
-                <select name="genero" id="sexo" onkeyup="validateSexo()">
-                    <option value="Hombre">Hombre</option>
-                    <option value="Mujer">Mujer</option>
-                    <option value="Otro">Otro</option>
+                <select name="sexo" id="sexo" onkeyup="validateSexo()">
+                    <option disabled selected value="">Please Select</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="otro">Otro</option>
                 </select>
                 <span id="sexo-error"></span>
             </div>
@@ -62,7 +63,7 @@
                 <input type="number" placeholder="Altura en cm" id="altura" onkeyup="validateAltura()">
                 <span id="altura-error"></span>
             </div>
-            <div class="input-group">
+            <!-- <div class="input-group">
                 <label>Principal Objetivo</label>
                 <select name="objectivo" id="objetivo" onkeyup="validateObjetivo()">
                     <option value="Perdida de grasa">Perdida de grasa</option>
@@ -131,9 +132,9 @@
                     <option value="70">70 USD o su equivalente en ARS</option>
                 </select>
                 <span id="income-error"></span>
-            </div>
+            </div> -->
 
-            <button>Submit</button>
+            <button onclick="return validateForm()">Submit</button>
             <span id="submit-error"></span>
 
         </form>
