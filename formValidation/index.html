@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/9f2e521c50.js" crossorigin="anonymous"></script>
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <i class="fas fa-paper-plane"></i>
+
+            <div class="input-group">
+                <label>Pais de Residencia</label>
+                <input type="text" placeholder="Donde estas viviendo?" id="pais" onkeyup="validatePais()">
+                <span id="pais-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Nombre y Apellido</label>
+                <input type="text" placeholder="Nombre completo..." id="nombre" onkeyup="validateNombre()">
+                <span id="nombre-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Edad</label>
+                <input type="number" placeholder="Cual es tu edad?" id="edad" onkeyup="validateEdad()">
+                <span id="edad-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Cuenta de Instagram</label>
+                <input type="text" placeholder="IG?" id="ig" onkeyup="validateIg()">
+                <span id="ig-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Genero</label>
+                <select name="genero" id="sexo" onkeyup="validateSexo()">
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <span id="sexo-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="Email..." id="email" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Celular</label>
+                <input type="tel" placeholder="Celular..." id="celular" onkeyup="validateCelular()">
+                <span id="celular-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Peso</label>
+                <input type="number" placeholder="Peso en kg" id="peso" onkeyup="validatePeso()">
+                <span id="peso-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Altura</label>
+                <input type="number" placeholder="Altura en cm" id="altura" onkeyup="validateAltura()">
+                <span id="altura-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Principal Objetivo</label>
+                <select name="objectivo" id="objetivo" onkeyup="validateObjetivo()">
+                    <option value="Perdida de grasa">Perdida de grasa</option>
+                    <option value="Ganancia de masa muscular">Ganancia de masa muscular</option>
+                    <option value="Vida mas sana">Vida mas sana</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <span id="objetivo-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Tenes otros objetivos especificos?</label>
+                <input type="text" placeholder="Otros objetivos..." id="otrosObj" onkeyup="validateOtrosObj()">
+                <span id="otrosObj-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Cual es tu experiencia en el gimnasio?</label>
+                <select name="experiencia" id="experiencia" onkeyup="validateExperiencia()">
+                    <option value="6meses">0 - 6 meses</option>
+                    <option value="1year">6 meses - 1 año</option>
+                    <option value="2years">1 año - 2 años</option>
+                    <option value="+2years">+2 años</option>
+                </select>
+                <span id="experiencia-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Cuantos dias a la semana podes entrenar?</label>
+                <select name="dias-entrenamiento" id="diasEntrenamiento" onkeyup="validateDiasEntrenamiento()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <span id="diasEntrenamiento-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Alguna vez pesaste la comida y traqueaste calorias?</label>
+                <select name="track" id="track" onkeyup="validateTrack()">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select>
+                <span id="track-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Del 1 al 10, cuan activo sos durante el dia?</label>
+                <select name="activo" id="activo" onkeyup="validateActivo()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <span id="activo-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Cuanto estas dispuesto a invertir mensualmente para cumplir con tu objetivo?</label>
+                <select name="income" id="income" onkeyup="validateIncome()">
+                    <option value="30">30 USD o su equivalente en ARS</option>
+                    <option value="50">50 USD o su equivalente en ARS</option>
+                    <option value="70">70 USD o su equivalente en ARS</option>
+                </select>
+                <span id="income-error"></span>
+            </div>
+
+            <button>Submit</button>
+            <span id="submit-error"></span>
+
+        </form>
+    </div>
+</body>
+</html>
